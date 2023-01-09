@@ -1,0 +1,20 @@
+.home {
+    background-image: url('./images/bg.jpg');
+    height: 100vh;
+    position: relative;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.randomDrink {
+    background-color: var(--primary-white);
+}
+/* 
+.randomDrinkContainer {
+    position: fixed;
+    z-index: 100;
+} */
