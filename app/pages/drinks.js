@@ -129,7 +129,7 @@ function drinks() {
                         </div>
                     </div>
                     <div className="row d-flex justify-content-center text-center">
-                        <div className="col-3">
+                        <div className="col">
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
