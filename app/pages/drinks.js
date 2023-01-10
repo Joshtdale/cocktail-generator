@@ -14,7 +14,7 @@ function drinks() {
     const [data, setData] = useState([]);
     const [drink, setDrink] = useState({});
     const [selectedId, setSelectedId] = useState(null);
-
+    
     async function getData(selector) {
         let response = "";
         if (selector === "spirit") {
@@ -40,14 +40,14 @@ function drinks() {
                 });
             }
         }
-
+        
         setData(response.data);
     }
-
+    
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
             // console.log(event.target.value);
-            if (value !== "all" && value !== "All") {
+            if (value.toLowerCase() !== "all") {
                 getData("spirit");
             } else {
                 // console.log("You want all drinks");
@@ -56,6 +56,27 @@ function drinks() {
             event.target.value = "";
         }
     };
+    
+    function getDataBtn(){
+        const searchInput = document.getElementById('searchInput')
+        if (value === ''){
+            toast.error("Error. Enter valid ingredient", {
+                style: {
+                    borderRadius: "20px",
+                    background: "white",
+                    color: "black",
+                },
+            });
+        } else {
+            if (value.toLowerCase() === 'all') {
+                getData('all');
+            } else {
+                getData("spirit");
+            }
+        }
+
+        searchInput.value = ''
+    }
 
     let filteredDrink = [];
 
@@ -113,19 +134,20 @@ function drinks() {
                             <motion.input
                                 whileHover={{ scale: 1.01 }}
                                 className="searchInput"
+                                id="searchInput"
                                 onChange={(e) => setValue(e.target.value)}
                                 onKeyDown={handleKeyDown}
                                 type="text"
                                 placeholder="Search by ingredient"
                             />
-                            {/* <motion.button
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.9 }}
-                className="searchBtn"
-                onClick={() => getData('spirit')}
-              >
-                Search
-              </motion.button> */}
+                            <motion.button
+                                whileHover={{ scale: 1.5 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="searchBtn"
+                                onClick={getDataBtn}
+                            >
+                                <ion-icon name="search-outline"></ion-icon>
+                            </motion.button>
                         </div>
                     </div>
                     <div className="row d-flex justify-content-center text-center">

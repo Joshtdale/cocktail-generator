@@ -46,8 +46,6 @@ h5 {
 .searchInput {
     padding: 10px;
     background-color: var(--primary-white);
-    /* border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px; */
     border-radius: 20px;
     height: 5vh;
     width: 50vw;
@@ -56,13 +54,16 @@ h5 {
 }
 
 .searchBtn {
-    background-color: var(--primary-white);
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
+    position: absolute;
+    margin-top: 3px;
+    background-color: transparent;
     height: 5vh;
-    border: 1px solid white;
-    color: black;
+    font-size: 2.7vh;
+    border: none;
+    right: 26vw;
+    color: var(--secondary-color);
 }
+
 
 .drinkCard {
     background-color: var(--primary-white);
@@ -112,6 +113,7 @@ h5 {
     .backBtn {
         left: 12vw;
     }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -134,5 +136,10 @@ h5 {
     }
     .searchInput {
         width: 75vw;
+    }
+
+    .searchBtn {
+        right: 12vw;
+        /* top: 44vh; */
     }
 }
