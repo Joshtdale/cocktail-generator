@@ -215,7 +215,7 @@ function drinks() {
                                         damping: 20,
                                         duration: 1,
                                     }}
-                                    className="backBtn d-flex justify-conent-center"
+                                    className="backBtn d-flex justify-content-center"
                                     onClick={() => setSelectedId(null)}
                                 >
                                     <ion-icon name="close-circle-outline"></ion-icon>{" "}
