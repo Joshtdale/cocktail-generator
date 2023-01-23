@@ -9,7 +9,7 @@ const APIUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 const APISearch = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 const APIAll = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
 
-function drinks() {
+function Drinks() {
     const [value, setValue] = useState("");
     const [data, setData] = useState([]);
     const [drink, setDrink] = useState({});
@@ -276,4 +276,4 @@ function drinks() {
     );
 }
 
-export default drinks;
+export default Drinks;
