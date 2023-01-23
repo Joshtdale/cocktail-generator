@@ -8,6 +8,7 @@ import Head from "next/head";
 const APIUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 const APISearch = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 const APIAll = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
+const APISearchDrink = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 function Drinks() {
     const [value, setValue] = useState("");
@@ -17,9 +18,24 @@ function Drinks() {
     
     async function getData(selector) {
         let response = "";
+        let number = 0
         if (selector === "spirit") {
-            response = await axios.get(APIUrl + value);
+            
+                response = await axios.get(APIUrl + value);
+
+            // async function searcher(){
+            //     searchDrink = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=69 special');
+            //     console.log(searchDrink.data)
+            // }
+            // searcher()
             if (!response.data) {
+                response = await axios.get(APISearchDrink + value);
+
+            }
+        } else if (selector === "all") {
+            response = await axios.get(APIAll);
+        }
+        if (response.data.drinks === null) {
                 toast.error("Error. Enter valid ingredient", {
                     style: {
                         borderRadius: "20px",
@@ -27,21 +43,9 @@ function Drinks() {
                         color: "black",
                     },
                 });
-            }
-        } else if (selector === "all") {
-            response = await axios.get(APIAll);
-            if (!response.data) {
-                toast.error("Error", {
-                    style: {
-                        borderRadius: "20px",
-                        background: "white",
-                        color: "black",
-                    },
-                });
-            }
         }
-        
         setData(response.data);
+
     }
     
     const handleKeyDown = (event) => {
