@@ -18,6 +18,7 @@ body {
   /* background-color: var(--main-grey) !important; */
   /* background-color: white; */
   font-family: 'Gothic A1', sans-serif !important;
+  /* background-image: url('../styles/images/bg.jpg'); */
 }
 
 .headFont {
