@@ -142,7 +142,7 @@ function Drinks() {
                                 onChange={(e) => setValue(e.target.value)}
                                 onKeyDown={handleKeyDown}
                                 type="text"
-                                placeholder="Search by ingredient"
+                                placeholder="Search by ingredient or name"
                             />
                             <motion.button
                                 whileHover={{ scale: 1.5 }}
