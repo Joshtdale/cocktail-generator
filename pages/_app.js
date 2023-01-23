@@ -3,14 +3,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/navbar.css";
 import "../styles/drinks.css";
 import '../styles/home.css'
-import Layout from "../components/Layout";
+// import Layout from "/workspace/cocktail-generator/components/Layout";
+import Header from "/workspace/cocktail-generator/components/Header"
+import Navbar from "/workspace/cocktail-generator/components/Navbar"
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <Layout>
+    // <Layout>
       <AnimatePresence>
         <motion.div
         key={router.route}
@@ -47,9 +49,11 @@ export default function App({ Component, pageProps }) {
           },
         }}
         >
+          <Header/>
+          <Navbar/>
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
-    </Layout>
+    // </Layout>
   );
 }

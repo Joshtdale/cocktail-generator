@@ -33,7 +33,7 @@ export default function Home({ data }) {
   // async function getData() {
   //   const response = await axios.get(APIUrl)
   //   setData(response.data);
-  //   // console.log(response.data);
+    // console.log(res.data);
   // }
   //     getData()
   //   }, []);
@@ -60,6 +60,7 @@ export default function Home({ data }) {
   }
   // console.log(measurements)
   let count = 0;
+  // const src = `${API}/user/photo/${blog.postedBy.username}`;
 
   return (
     <>
@@ -84,7 +85,10 @@ export default function Home({ data }) {
           >
             <div className="drinkName fs-3">{drink.strDrink}</div>
             <div className="text-muted">{drink.strAlcoholic}</div>
-            <img className="drinkImg" src={drink.strDrinkThumb}></img>
+            {/* <div className="drinkImg"> */}
+            <img src={drink.strDrinkThumb} className="drinkImg"/>
+            {/* </div> */}
+            {/* <Image loader={() => src} src={drink.strDrinkThumb} width={500} height={500}/> */}
             <div className="ingredientCard">
               {ingredients.map((item) => {
                 count += 1;
