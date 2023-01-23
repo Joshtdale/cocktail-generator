@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import logo from "../styles/images/logo.png";
 // import Image from "next/image";
-// import { Html, Head, Main, NextScript } from "next/document";
 import Link from "next/link";
 import { motion } from "framer-motion";
 // import Header from "./Header";
