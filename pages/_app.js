@@ -4,8 +4,10 @@ import "../styles/navbar.css";
 import "../styles/drinks.css";
 import '../styles/home.css'
 // import Layout from "/workspace/cocktail-generator/components/Layout";
-import Header from "/workspace/cocktail-generator/components/Header"
-import Navbar from "/workspace/cocktail-generator/components/Navbar"
+// import Header from "/workspace/cocktail-generator/components/Header"
+import Header from '../components/Header'
+import Navbar from "../components/Navbar";
+// import Navbar from "/workspace/cocktail-generator/components/Navbar"
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
