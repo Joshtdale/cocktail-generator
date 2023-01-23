@@ -29,6 +29,7 @@ body {
 @media only screen and (max-width: 600px) {
   .headFont {
     font-size: 8vw !important;
+    margin-top: 20px;
   }
 }
 
