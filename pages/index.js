@@ -93,7 +93,7 @@ export default function Home({ data }) {
               {ingredients.map((item) => {
                 count += 1;
                 return (
-                  <div>
+                  <div key={count}>
                     {measurements[count - 1]} - {item}
                   </div>
                 );
