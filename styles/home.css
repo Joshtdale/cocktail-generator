@@ -18,3 +18,12 @@
     position: fixed;
     z-index: 100;
 } */
+
+.newDrinkBtn {
+    background-color: #699CFA;
+    width: 15vw;
+    min-width: 150px;
+    border: none;
+    border-radius: 10px;
+}
+
