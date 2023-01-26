@@ -6,10 +6,11 @@ font-family: 'Monoton', cursive; */
 
 :root{
   --nav-color: black;
-  --secondary-color: #0d6dfda6;
+  --secondary-color: #699CFA;
   --main-grey: rgb(50, 50, 50);
   --primary-white: rgba(255, 255, 255, 0.95);
   --primary-red: #C21B25;
+  --primary-yellow: #d6c282;
 }
 
 
